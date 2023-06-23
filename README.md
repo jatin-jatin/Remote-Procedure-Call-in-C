@@ -25,5 +25,3 @@ the reciever machine. This is done to recreate the original structure in the rec
 ### Why do we need serialization and deserialization?
 To make the **application state independent of machine, os, compiler, architecture, endianess, etc.**\
 We want to convert our application state into a form independent of the above mentioned factors and can be re-created for the specific situation.
-
-![Serialization and Deserialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/RPC.png "Serialization and Deserialization")
