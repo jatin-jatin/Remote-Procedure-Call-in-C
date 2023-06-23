@@ -1,6 +1,5 @@
-#include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
+#include<stdio.h>
 #include "./../../serialize-deserialize.h"
 
 typedef struct employee_t 
@@ -32,6 +31,7 @@ employee_t* de_serialize_employee_t(ser_buff_t *b){
         
     // if not null rewind read point in buffer
     serialize_buffer_skip(b,(int)sizeof(unsigned int)*-1);
+
     // fill the struct from serialized data
     employee_t * obj = calloc(1,sizeof(employee_t));
     de_serialize_data((char*)&obj->id,b,sizeof(int));
@@ -44,29 +44,4 @@ void display_employee_t(employee_t *emp){
     printf("Employee ID: %d\n", emp->id);
     printf("First Name: %s\n", emp->first_name);
     printf("Last Name: %s\n", emp->last_name);
-}
-
-int main(){
-    employee_t *emp1=calloc(1,sizeof(employee_t));
-    emp1->id=12;
-    strcpy(emp1->first_name,"Leonardo");
-    strcpy(emp1->last_name,"Dicaprio");
-
-    ser_buff_t *buff;
-    init_serialized_buffer(&buff);
-
-    serialize_employee_t(emp1,buff);
-    reset_serialize_buffer(buff);
-    employee_t *emp2 = de_serialize_employee_t(buff);
-
-    printf("Serialized Structure\n");
-    display_employee_t(emp1);
-    printf("----------------------------------------------------------\n");
-    printf("Deserialized Structure\n");
-    display_employee_t(emp2);
-
-    free(emp1);
-    free(emp2);
-
-    return 0;
 }

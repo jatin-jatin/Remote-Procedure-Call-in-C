@@ -74,7 +74,10 @@ int main(){
     reset_serialize_buffer(buff);
     company_t *comp2 = de_serialize_company_t(buff);
 
+    printf("Serialized Structure\n");
     display_company_t(comp1);
+    printf("----------------------------------------------------------\n");
+    printf("Deserialized Structure\n");
     display_company_t(comp2);
 
     free(comp1);
