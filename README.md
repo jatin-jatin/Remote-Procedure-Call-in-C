@@ -7,18 +7,20 @@ This repository contains a simple remote procedure call implementation in c.
 
 ## Components of implementing RPC
 * **Serialization and Deserialization**
-* **To add**
+* **Socket programming**
 * **To add**
 
 ## Serialization and Deserialization
 
 ### What is Serialization ?
-Serialization is the process of converting the application state (code in heap) to a flat structure which can be sent over the network. It is
+Serialization is the process of converting a memory object to a flat structure which can be sent over the network. It is
 created in such a way that it is independent of the underlying machine.
+![Serialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/pictures/serialization.png"Serialization")
 
 ### What is Deserialization ?
-Deserialization is the process of converting the flat structure create using serialization by the sender machine into the original application state in 
+Deserialization is the process of converting the  serialized flat structure cr original application state in 
 the reciever machine. This is done to recreate the original structure in the recieving machine.
+![Deserialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/pictures/deserialization.png"Deserialization")
 
 ### Why do we need serialization and deserialization?
 To make the **application state independent of machine, os, compiler, architecture, endianess, etc.**\

@@ -11,6 +11,7 @@ typedef struct serialized_buffer{
 
 // constructor for ser_buff_t
 void init_serialized_buffer(ser_buff_t **b);
+void init_serialized_buffer_of_defined_size(ser_buff_t **b, int size);
 
 // serialize and de-serialize functions
 void serialize_data(ser_buff_t *b, char *data,int size);
@@ -19,4 +20,5 @@ void de_serialize_data(char *dest, ser_buff_t *b,int size);
 // other spl functions 
 void serialize_buffer_skip(ser_buff_t*b,int skip_size);
 void reset_serialize_buffer(ser_buff_t*b);
+int get_serialize_buffer_length(ser_buff_t *b);
 #endif

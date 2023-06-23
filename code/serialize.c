@@ -10,6 +10,12 @@ void init_serialized_buffer(ser_buff_t **s_buff){
     (*s_buff)->size = SERIALIZE_BUFFER_DEFAULT_SIZE;
     (*s_buff)->next= 0;
 }
+void init_serialized_buffer_of_defined_size(ser_buff_t **b, int size){
+    (*b) = (ser_buff_t *)calloc(1, sizeof(ser_buff_t));
+    (*b)->b = calloc(1, size);
+    (*b)->size = size;
+    (*b)->next = 0;
+}
 
 void serialize_data(ser_buff_t *b, char *data,int size){
     int available_mem = b->size-b->next;
@@ -43,3 +49,6 @@ void reset_serialize_buffer(ser_buff_t*b){
     b->next=0;
 }
 
+int get_serialize_buffer_length(ser_buff_t *b){
+	return b->size;
+}
