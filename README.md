@@ -53,7 +53,7 @@ typedef struct company_t
 typedef struct employee_performance_t
 {
     char company_name[30];
-    employee_t *emp;
+    employee_t *emp; // nested struct
     int rating;
 }employee_performance_t;
 ```
