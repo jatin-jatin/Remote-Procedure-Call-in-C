@@ -25,3 +25,35 @@ the reciever machine. This is done to recreate the original structure in the rec
 ### Why do we need serialization and deserialization?
 To make the **application state independent of machine, os, compiler, architecture, endianess, etc.**\
 We want to convert our application state into a form independent of the above mentioned factors and can be re-created for the specific situation.
+
+### Examples of Serialization and Deserialization
+
+#### 1. Simple Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/1.simple-struct/simple-struct.c](link)
+```
+typedef struct employee_t 
+{ 
+    // only primitive types
+    int id;
+    char first_name[30];
+    char last_name[30];
+}employee_t;
+```
+#### 2. Embedded Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/2.embedded-struct/embedded-struct.c](link)
+```
+typedef struct company_t
+{
+    char name[30];
+    employee_t CEO; // embedded employee_t struct
+    int valuation;
+    int start_year;
+}company_t;
+```
+#### 3. Nested Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/3.nested-struct/nested-struct.c](link)
+```
+typedef struct employee_performance_t
+{
+    char company_name[30];
+    employee_t *emp;
+    int rating;
+}employee_performance_t;
+```
