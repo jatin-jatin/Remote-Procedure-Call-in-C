@@ -28,7 +28,7 @@ We want to convert our application state into a form independent of the above me
 
 ### Examples of Serialization and Deserialization
 
-#### 1. Simple Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/1.simple-struct/simple-struct.c](link)
+#### 1. Simple Struct: [link](serialize-deserialize-primitives/examples/1.simple-struct/simple-struct.c)
 ```
 typedef struct employee_t 
 { 
@@ -38,7 +38,7 @@ typedef struct employee_t
     char last_name[30];
 }employee_t;
 ```
-#### 2. Embedded Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/2.embedded-struct/embedded-struct.c](link)
+#### 2. Embedded Struct: [link](serialize-deserialize-primitives/examples/2.embedded-struct/embedded-struct.c)
 ```
 typedef struct company_t
 {
@@ -48,7 +48,7 @@ typedef struct company_t
     int start_year;
 }company_t;
 ```
-#### 3. Nested Struct: [https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/serialize-deserialize-primitives/examples/3.nested-struct/nested-struct.c](link)
+#### 3. Nested Struct: [link](serialize-deserialize-primitives/examples/3.nested-struct/nested-struct.c)
 ```
 typedef struct employee_performance_t
 {
