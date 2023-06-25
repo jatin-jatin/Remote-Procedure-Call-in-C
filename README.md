@@ -73,7 +73,7 @@ int main(){
 ```
 int main(){
     // receives data = 101 
-    // sends data+1 from server
+    // sends data+1 to client
     // check server.c for details
 }
 ```
