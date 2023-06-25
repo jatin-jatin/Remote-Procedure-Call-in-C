@@ -84,9 +84,9 @@ int main(){
 
 ![RPC Illustration](.pictures/rpc_illustration.png "RPC Illustration")
 
-### Example : lst_sum function
+### Example: lst_sum function
 
-* lst_data : argument type of lst_sum
+* lst_data: argument type of lst_sum
 ```
 typedef struct lst_data{
     int data;
@@ -94,7 +94,7 @@ typedef struct lst_data{
 }lst_data;
 ```
 
-* lst_sum signature
+### lst_sum signature
 ```
 int lst_sum(lst_data *head){
     // returns sum of all elements in a list
