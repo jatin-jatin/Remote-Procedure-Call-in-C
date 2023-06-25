@@ -61,7 +61,7 @@ typedef struct employee_performance_t
 * Socket programming is used for communication between processes/machines.
 * Used UDP for fast data transfer
 * To demonstrate this there are two programs : client.c and receiver.c
-#### client.c [link](2.socket-programming/client.c)
+#### client.c: [link](2.socket-programming/client.c)
 ```
 int main(){
     // sends data = 101 
@@ -69,7 +69,7 @@ int main(){
     // check client.c for details
 }
 ```
-#### server.c [link](2.socket-programming/server.c)
+#### server.c: [link](2.socket-programming/server.c)
 ```
 int main(){
     // receives data = 101 
