@@ -8,7 +8,6 @@ This repository contains a simple remote procedure call implementation in c.
 ## Components of implementing RPC
 * **Serialization and Deserialization**
 * **Socket programming**
-* **To add**
 
 ## Serialization and Deserialization
 
@@ -38,7 +37,7 @@ typedef struct employee_t
     char last_name[30];
 }employee_t;
 ```
-#### 2. Embedded Struct: [link](serialize-deserialize-primitives/examples/2.embedded-struct/embedded-struct.c)
+#### 2. Embedded Struct: [link](1.serialize-deserialize-primitives/examples/2.embedded-struct/embedded-struct.c)
 ```
 typedef struct company_t
 {
@@ -48,7 +47,7 @@ typedef struct company_t
     int start_year;
 }company_t;
 ```
-#### 3. Nested Struct: [link](serialize-deserialize-primitives/examples/3.nested-struct/nested-struct.c)
+#### 3. Nested Struct: [link](1.serialize-deserialize-primitives/examples/3.nested-struct/nested-struct.c)
 ```
 typedef struct employee_performance_t
 {
@@ -57,3 +56,26 @@ typedef struct employee_performance_t
     int rating;
 }employee_performance_t;
 ```
+
+## Socket Programming
+* Socket programming is used for communication between processes/machines.
+* Used UDP for fast data transfer
+* To demonstrate this there are two programs : client.c and receiver.c
+#### client.c [link](2.socket-programming/client.c)
+```
+int main(){
+    // sends data = 101 
+    // receives data+1 from server
+    // check client.c for details
+}
+```
+#### server.c [link](2.socket-programming/server.c)
+```
+int main(){
+    // receives data = 101 
+    // sends data+1 from server
+    // check server.c for details
+}
+```
+
+## RPC Implementation
