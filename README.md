@@ -79,3 +79,28 @@ int main(){
 ```
 
 ## RPC Implementation
+* In order to implement rpc serialization-deserialization and socket programming are used.
+* The image below illustrates the implementation of rpc.
+
+![RPC Illustration](.pictures/rpc_illustration.png "RPC Illustration")
+
+### Example : lst_sum function
+
+* lst_data : argument type of lst_sum
+```
+typedef struct lst_data{
+    int data;
+    struct lst_data *next;
+}lst_data;
+```
+
+* lst_sum signature
+```
+int lst_sum(lst_data *head){
+    // returns sum of all elements in a list
+}
+```
+
+The below file contains its implementation :
+client_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
+server_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
