@@ -102,5 +102,5 @@ int lst_sum(lst_data *head){
 ```
 
 The below file contains its implementation :  
-**client_rpc.c**: [link](.pictures/rpc_illustration.png "RPC Illustration")
-**server_rpc.c**: [link](.pictures/rpc_illustration.png "RPC Illustration")
+#### client_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
+#### server_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
