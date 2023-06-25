@@ -15,12 +15,12 @@ This repository contains a simple remote procedure call implementation in c.
 ### What is Serialization ?
 Serialization is the process of converting a memory object to a flat structure which can be sent over the network. It is
 created in such a way that it is independent of the underlying machine.
-![Serialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/pictures/serialization.png "Serialization")
+![Serialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/.pictures/serialization.png "Serialization")
 
 ### What is Deserialization ?
 Deserialization is the process of converting the  serialized flat structure cr original application state in 
 the reciever machine. This is done to recreate the original structure in the recieving machine.
-![Deserialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/pictures/deserialization.png "Deserialization")
+![Deserialization](https://github.com/jatin-jatin/Remote-Procedure-Call-in-C/blob/main/.pictures/deserialization.png "Deserialization")
 
 ### Why do we need serialization and deserialization?
 To make the **application state independent of machine, os, compiler, architecture, endianess, etc.**\
