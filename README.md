@@ -27,7 +27,7 @@ We want to convert our application state into a form independent of the above me
 
 ### Examples of Serialization and Deserialization
 
-#### 1. Simple Struct: [link](serialize-deserialize-primitives/examples/1.simple-struct/simple-struct.c)
+#### 1. Simple Struct: [link](1.serialize-deserialize-primitives/examples/1.simple-struct/simple-struct.c)
 ```
 typedef struct employee_t 
 { 
