@@ -21,4 +21,5 @@ void de_serialize_data(char *dest, ser_buff_t *b,int size);
 void serialize_buffer_skip(ser_buff_t*b,int skip_size);
 void reset_serialize_buffer(ser_buff_t*b);
 int get_serialize_buffer_length(ser_buff_t *b);
+void free_ser_buff_t(ser_buff_t *b);
 #endif

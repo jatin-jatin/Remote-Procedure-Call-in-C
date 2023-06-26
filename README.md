@@ -86,21 +86,33 @@ int main(){
 
 ### Example: lst_sum function
 
-#### lst_data: argument type of lst_sum
+#### lst_data_t: argument type of lst_sum
 ```
-typedef struct lst_data{
+typedef struct lst_data_t{
     int data;
-    struct lst_data *next;
-}lst_data;
-```
-
-#### lst_sum signature
-```
-int lst_sum(lst_data *head){
-    // returns sum of all elements in a list
-}
+    struct lst_data_t *next;
+}lst_data_t;
 ```
 
 The below file contains its implementation :  
-#### client_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
-#### server_rpc.c: [link](.pictures/rpc_illustration.png "RPC Illustration")
+#### rpc_client.c: [link](3.RPC/rpc_client.c)
+```
+int lst_sum(lst_data_t *head){
+    // step 1 : serialize lst_data_t *head -> client_send_buff
+    // step 2 : send  client_send_buff --- over network ----> 
+    // step 8 : --- over network ----> client_recv_buff
+    // step 9 : deserialize client_recv_buff -> result
+    // step 10 : return result;
+}
+```
+
+#### rpc_server.c: [link](3.RPC/rpc_server.c)
+```
+int maint(){
+    // step 3 : --- over network ----> server_recv_buff
+    // step 4 : deserialize server_recv_buff -> lst_data_t *head
+    // step 5 : call actual lst_sum(head) -> result
+    // step 6 : serialize result -> server_send_buff
+    // step 7 : send server_send_buff --- over network ---->
+}
+```

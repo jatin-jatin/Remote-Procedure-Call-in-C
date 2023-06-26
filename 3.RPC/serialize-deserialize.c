@@ -1,4 +1,4 @@
-#include "serialize.h"
+#include "serialize-deserialize.h"
 #include<stdio.h>
 #include<memory.h>
 #include<stdlib.h>
@@ -51,4 +51,9 @@ void reset_serialize_buffer(ser_buff_t*b){
 
 int get_serialize_buffer_length(ser_buff_t *b){
 	return b->size;
+}
+
+void free_ser_buff_t(ser_buff_t *b){
+    free(b->b);
+    free(b);
 }
